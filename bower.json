@@ -1,0 +1,16 @@
+{
+  "name": "parity",
+  "description": "An HCPSS Drupal theme",
+  "main": "",
+  "authors": [
+    "Brendan Anderson <brendan_anderson@hcpss.org>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {
+    "susy": "^2.2.12",
+    "normalize-css": "normalize.css#^5.0.0"
+  }
+}

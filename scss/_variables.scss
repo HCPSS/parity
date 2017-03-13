@@ -1,0 +1,40 @@
+$susy: (
+  container: 1280px,
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+$font-family-primary: 'Fira Sans', sans-serif;
+
+$font-large: 2.0rem;
+$font-default: 1.8rem;
+$font-small: 1.4rem;
+
+// Font weights.
+$font-weight--thin: 100;
+$font-weight--light: 200;
+$font-weight--medium: 300;
+$font-weight--bold: 400;
+$font-weight--ultra-bold: 600;
+
+// Colors
+$text-color:        #515151;
+$primary-color:     #0063a4;
+$secondary-color:   #a2a2a2;
+$primary-contrast:  #ffffff;
+$tertiary-color:    #fecc6a;
+$tertiary-contrast: #444444;
+
+// Breakpoints
+$x-small: 320px;
+$small: 480px;
+$medium: 620px;
+$large: 768px;
+$x-large: 1024px;
+$largest: 1220px;
+
+// Padding
+$stnd-padding: em(20px);

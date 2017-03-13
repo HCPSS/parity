@@ -1,0 +1,48 @@
+label {
+  display: table;
+  
+}
+
+input.form-autocomplete, input.form-text, input.form-tel, input.form-email, 
+input.form-url, input.form-search, input.form-number, input.form-color, 
+input.form-file, input.form-date, input.form-time, textarea.form-textarea, select.form-select {
+  box-sizing: border-box;
+  padding: $font-default / 3;
+  margin-top: 0;
+  max-width: 100%;
+  border: 1px solid $secondary-color;
+  border-radius: 3px;
+  
+}
+
+.description {
+  font-size: $font-small;
+  margin-top: 0;
+}
+
+div.form-item {
+  //margin-top: 0;
+}
+  
+label.option {
+  display: inline;
+}
+
+.form-item > div {
+  margin: 0;
+}
+
+legend {
+  font-weight: $font-weight--ultra-bold;
+}
+
+button, input[type="submit"], .button {
+  padding: $font-default / 2 $font-default / 2;
+}
+
+label.form-required:after {
+    content: '*';
+    color: red;
+}
+
+.page option { margin-top: 0; }

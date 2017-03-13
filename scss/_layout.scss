@@ -1,0 +1,42 @@
+.inner-header, main, .inner-footer {
+  @include container;
+  margin: 0 auto;
+}
+
+.breadcrumb, .highlighted {
+  @include span(12);
+}
+
+.layout {
+  .sidebar-first, .sidebar-second {
+    @include span(12);
+    @include susy-breakpoint($medium) {
+        @include span(3);
+    }
+  }
+
+  &.two-sidebars #content {
+    @include span(12);
+    @include susy-breakpoint($medium) {
+        @include span(6);
+    }
+  }
+
+  &.one-sidebar #content {
+    @include span(12);
+    @include susy-breakpoint($medium) {
+        @include span(9);
+    }
+  }
+
+  &.no-sidebar #content {
+    @include span(12);
+  }
+
+  .footer-first, .footer-second {
+    @include span(12);
+    @include susy-breakpoint($x-large) {
+        @include span(6);
+    }
+  }
+}

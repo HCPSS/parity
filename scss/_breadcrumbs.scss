@@ -1,0 +1,23 @@
+.breadcrumb {
+  font-size: $font-small;
+  margin: $font-small 0;
+    
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    li {
+      float: left;
+      
+      margin-right: $font-small / 2;
+      &:after { 
+        content: '»';
+        padding-left: $font-small / 3;
+      }
+      &:last-child:after {
+        content: '';
+      } 
+    }
+  }
+}

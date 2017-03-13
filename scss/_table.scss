@@ -1,0 +1,18 @@
+table{
+  tr {
+    &:nth-child(even) {
+      background-color: lighten($secondary-color, 30%);
+    }
+
+    th {
+      background-color: $secondary-color;
+      color: white;
+      a { color: white }
+      text-align: left;
+    }
+
+    td, th {
+      padding: $font-default / 2 $font-default;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+html {
+  font-size: 62.5%; /* Sets up the Base 10 stuff */
+  background-color: $primary-color;
+}
+
+body {
+  font-family: $font-family-primary;
+  font-size:   $font-default;
+  color:       $text-color;
+  line-height: $font-default * 1.5;
+  background-color: white;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  line-height: $font-default * 3;
+}
+
+// Rythm (lobotomized owl)
+.page {
+  p + p { margin-top: 1.5em; }
+  * + * {
+    margin-top: 1.5em;
+  }
+
+  // This is some stuff that I don't want to be effected by the lobotomized owl.
+  //.highlighted,
+  // #content,
+  //.sidebar-first,
+  //.sidebar_second,
+  //.quickedit-field,
+  h1,
+  #block-parity-breadcrumbs li, main, #block-parity-breadcrumbs nav,
+  #block-parity-main-menu li, .field-value, br, .footer-second, .slogan {
+    margin-top: 0;
+  }
+
+  .logo {
+    margin-top: inherit;
+  }
+}
+
+footer .quickedit-field {
+  margin: 0;
+}

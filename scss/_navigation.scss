@@ -1,0 +1,82 @@
+.region-sidebar-first #block-parity-main-menu,
+.region-sidebar-second #block-parity-main-menu {
+  > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+      padding: $font-default 0;
+      border-bottom: 1px lighten($secondary-color, 25%) solid;
+
+      &:last-child {
+        border-bottom-width: 0;
+      }
+    }
+  }
+}
+
+// Admin tabs
+#block-parity-local-tasks {
+  > ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      border-bottom: 1px $secondary-color solid;
+      @include clearfix;
+
+      > li {
+        margin: 0;
+        display: block;
+        float: left;
+        padding: $font-default / 2;
+        //border: 1px $secondary-color solid;
+
+        .is-active {
+          color: $secondary-color;
+        }
+      }
+  }
+}
+
+// Primary menu
+.region-primary-menu {
+  position: relative;
+  top: $font-default * -3.7;
+
+  > nav {
+    @include clearfix;
+    text-align: center;
+
+    > ul {
+      display: inline-block;
+      list-style: none;
+      @include clearfix;
+      margin: 0 auto;
+      text-align: center;
+      background-color: $primary-color;
+      padding: 0 $font-default * 2;
+
+      > li {
+        display: block;
+
+        @include susy-breakpoint($medium) {
+          display: inline-flex;
+        }
+
+        border-width: 0;
+        > a {
+          color: $primary-contrast;
+          padding: $font-default / 2;
+          font-size: $font-large;
+
+          &:hover {
+            background-color: $primary-contrast;
+            color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

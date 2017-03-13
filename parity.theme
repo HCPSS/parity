@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * Implementation of hook_preprocess_page().
+ */
+function parity_preprocess_page(&$variables) {
+  $variables['page_attributes']['class'][] = 'page';
+  $variables['page_attributes']['class'][] = 'layout';
+
+  if (!empty($variables['page']['sidebar_first'])) {
+    $sidebar_first =  $variables['page']['sidebar_first'];
+  }
+
+  if (!empty($variables['page']['sidebar_second'])) {
+      $sidebar_second =  $variables['page']['sidebar_second'];
+  }
+
+  // Dynamic sidebars.
+  if (!empty($sidebar_first) && !empty($sidebar_second)) {
+      $variables['page_attributes']['class'][] = 'two-sidebars';
+  }
+  else if (empty($sidebar_first) && !empty($sidebar_second)) {
+      $variables['page_attributes']['class'][] = 'one-sidebar';
+      $variables['page_attributes']['class'][] = 'sidebar-second';
+  }
+  else if (!empty($sidebar_first) && empty($sidebar_second)) {
+      $variables['page_attributes']['class'][] = 'one-sidebar';
+      $variables['page_attributes']['class'][] = 'sidebar-first';
+  }
+  else {
+      $variables['page_attributes']['class'][] = 'no-sidebars';
+  }
+}
+
+/**
+ * Implementation of hook_preprocess_field().
+ */
+function parity_preprocess_field(&$variables) {
+  //ldpm($variables);
+  $variables['title_attributes']['class'][] = 'field-label';
+
+  $num_items = count($variables['items']);
+  for ($i = 0; $i < $num_items; $i++) {
+      $variables['items'][$i]['attributes']->addClass('field-value');
+  }
+}

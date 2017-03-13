@@ -1,0 +1,20 @@
+name: Parity
+type: theme
+description: An HCPSS theme aimed at simplicity.
+core: 8.x
+libraries:
+  - parity/global-styling
+  - core/normalize
+base theme: stable
+regions:
+  header: Header
+  primary_menu: Primary Menu
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: Sidebar first
+  sidebar_second: Sidebar second
+  footer_first: Footer (first)
+  footer_second: Footer (second)
+  page_top: Page top
+  page_bottom: Page bottom

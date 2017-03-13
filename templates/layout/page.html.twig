@@ -1,0 +1,58 @@
+<div class="{{ page_attributes.class | join(' ') }}" role="document">
+
+  {%  if page.header %}
+    <header role="banner">
+      <div class="inner-header">
+        {{ page.header }}
+      </div>
+    </header>
+  {% endif %}
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    {{ page.primary_menu }}
+
+    {% if page.breadcrumb|striptags|trim %}
+      <div class="breadcrumb">
+        {{ page.breadcrumb }}
+      </div><!-- /.breadcrumb -->
+    {% endif %}
+
+    {% if page.highlighted %}
+      <div class="highlighted">
+        {{ page.highlighted }}
+      </div><!-- /.highlighted -->
+    {% endif %}
+
+    {% if page.sidebar_first %}
+      <aside class="sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    <section id="content">
+      {{ page.content }}
+    </section>{# /.layout-content #}
+
+    {% if page.sidebar_second %}
+      <aside class="sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+  </main>
+
+  {% if page.footer_first or page.footer_second %}
+    <footer role="contentinfo">
+      <div class="inner-footer">
+        <div class="footer-first">
+          {{ page.footer_first }}
+        </div>
+        <div class="footer-second">
+          {{ page.footer_second }} 
+        </div>     
+      </div>
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}

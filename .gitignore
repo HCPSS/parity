@@ -1,0 +1,11 @@
+# IDE
+.buildpath
+.project
+.settings
+
+# Bower
+bower_components
+
+# NPM
+node_modules
+/nbproject/private/
