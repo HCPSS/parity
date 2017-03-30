@@ -1,5 +1,5 @@
-.region-sidebar-first #block-parity-main-menu,
-.region-sidebar-second #block-parity-main-menu {
+.region-sidebar-first nav,
+.region-sidebar-second nav {
   > ul {
     margin: 0;
     padding: 0;
@@ -8,6 +8,7 @@
     > li {
       padding: $font-default 0;
       border-bottom: 1px lighten($secondary-color, 25%) solid;
+      margin: 0;
 
       &:last-child {
         border-bottom-width: 0;
@@ -17,27 +18,26 @@
 }
 
 // Admin tabs
-#block-parity-local-tasks {
-  > ul {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      border-bottom: 1px $secondary-color solid;
-      @include clearfix;
 
-      > li {
-        margin: 0;
-        display: block;
-        float: left;
-        padding: $font-default / 2;
-        //border: 1px $secondary-color solid;
+ul.tabs.primary {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 1px $secondary-color solid;
+  @include clearfix;
 
-        .is-active {
-          color: $secondary-color;
-        }
-      }
+  > li {
+    margin: 0;
+    display: block;
+    float: left;
+    padding: $font-default / 2;
+
+    .is-active {
+      color: $secondary-color;
+    }
   }
 }
+
 
 // Primary menu
 .region-primary-menu {
