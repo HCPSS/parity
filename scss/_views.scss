@@ -13,3 +13,42 @@
   background-repeat: no-repeat;
   background-position: right center;
 }
+
+.views-view-grid.horizontal {
+  .views-col {
+    margin-top: 0;
+  }
+  .views-row {
+    margin-top: 0;
+  }
+}
+
+.views-view-grid.vertical {
+  .views-col {
+    margin-top: 0;
+  }
+  .views-row {
+    margin-top: 0;
+  }
+}
+
+.views-element-container h2 {
+    font-weight: $font-weight--ultra-bold;
+    font-size: 1em;
+    margin: 0;
+}
+
+.item-list {
+    h3 {
+        font-weight: $font-weight--ultra-bold;
+        font-size: 1em;
+        margin: 0;
+    }
+    
+    ul {
+        margin-top: 0;
+        li {
+            margin: 0;
+        }
+    }
+}
