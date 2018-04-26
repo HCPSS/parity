@@ -41,9 +41,6 @@ ul.tabs.primary {
 
 // Primary menu
 .region-primary-menu {
-  position: relative;
-  top: $font-default * -3.7;
-
   > nav {
     @include clearfix;
     text-align: center;

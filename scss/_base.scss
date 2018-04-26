@@ -50,3 +50,8 @@ h1 {
 footer .quickedit-field {
   margin: 0;
 }
+
+.page ul li + li,
+.page ol li + li {
+  margin-top: 0.5em;
+}

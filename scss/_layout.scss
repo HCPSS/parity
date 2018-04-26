@@ -3,6 +3,11 @@
   margin: 0 auto;
 }
 
+main {
+  position: relative;
+  top: $font-default * -3.7;
+}
+
 .breadcrumb, .highlighted {
   @include span(12);
 }

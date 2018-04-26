@@ -9,3 +9,12 @@
 .field-value p {
     margin: 0;
 }
+
+.field--label-inline .field-label {
+  float: left;
+  padding-right: 0.5em;
+}
+
+.field--label-inline .field-label:after {
+  content: ':';
+}
