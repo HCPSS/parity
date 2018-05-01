@@ -66,6 +66,11 @@ ul.tabs.primary {
           color: $primary-contrast;
           padding: $font-default / 2;
           font-size: $font-large;
+          display: block;
+          
+          @include susy-breakpoint($medium) {
+            display: inline;
+          }
 
           &:hover {
             background-color: $primary-contrast;

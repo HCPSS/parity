@@ -3,28 +3,26 @@
   margin: 0 auto;
 }
 
-.page {
-  > header, > footer, > main {
-    padding-left:  $small-padding;
-    padding-right: $small-padding;
-    
-        @include susy-breakpoint($medium) {
-      padding-left:  $stnd-padding;
-      padding-right: $stnd-padding;
-    }
-  }   
-}
-
 main {
   position: relative;
-  top: $font-default * -3.7;
+  top: $font-default * -2.1;
 }
 
 .breadcrumb, .highlighted {
   @include span(12);
 }
 
+.page > main {
+  > .sidebar-first, > #content, > .sidebar-second {
+    margin-top: 1rem;   
+  }   
+}
+
 .layout {
+  > header {
+    @include span(12);
+  }
+    
   .sidebar-first, .sidebar-second {
     @include span(12);
     @include susy-breakpoint($medium) {
@@ -46,7 +44,7 @@ main {
     }
   }
 
-  &.no-sidebar #content {
+  &.no-sidebars #content {
     @include span(12);
   }
 
