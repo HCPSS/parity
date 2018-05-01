@@ -2,7 +2,8 @@
   > footer {
     background-color: $primary-color;
     border-top: $font-default / 3 lighten($primary-color, 20%) solid;
-    padding: $font-default 0;
+    padding-top: $font-default;
+    padding-bottom: $font-default;
     color: $primary-contrast;
 
     a { color: $primary-contrast; }

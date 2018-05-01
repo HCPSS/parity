@@ -3,6 +3,18 @@
   margin: 0 auto;
 }
 
+.page {
+  > header, > footer, > main {
+    padding-left:  $small-padding;
+    padding-right: $small-padding;
+    
+        @include susy-breakpoint($medium) {
+      padding-left:  $stnd-padding;
+      padding-right: $stnd-padding;
+    }
+  }   
+}
+
 main {
   position: relative;
   top: $font-default * -3.7;

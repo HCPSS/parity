@@ -1,7 +1,8 @@
 .page > header {
-  border-top:    12px $primary-color solid;
-  border-bottom: 32px $secondary-color solid;
-  padding:       1rem 0;
+  border-top:     12px $primary-color solid;
+  border-bottom:  32px $secondary-color solid;
+  padding-top:    1rem;
+  padding-bottom: 1rem;
 }
 
 .branding-block {
