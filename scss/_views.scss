@@ -44,11 +44,43 @@
         font-size: 1em;
         margin: 0;
     }
-    
+
     ul {
-        margin-top: 0;
+        margin-top: $font-default / 2;
         li {
             margin: 0;
         }
     }
+}
+
+.views-view-grid.horizontal .views-row .views-col {
+  margin-right: 2rem;
+}
+
+.page .view-content .views-row {
+  margin-top: inherit;
+}
+
+.page .views-element-container > .grid.three-column {
+  > .view-content {
+    .views-row { margin-bottom: $font-default * 2; }
+      
+    display: block;
+    ul li {
+      margin-top: 0;  
+    }
+    
+    @include susy-breakpoint($medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: $font-default / 2;
+      margin-bottom: 0;
+      
+      .views-row { margin-bottom: 0; }
+    }
+  }
+  
+  .view-content {
+    margin-top: 0;
+  }
 }
