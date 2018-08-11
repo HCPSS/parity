@@ -2,8 +2,13 @@ h1 {
   // $font-default: 1.8rem;
   font-size: $font-default * 2;
   line-height: $font-default * 3;
+  font-weight: 800;
 }
 
 h2 {
   font-size: $font-default * 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-header;
 }

@@ -1,4 +1,4 @@
-.inner-header, main, .inner-footer {
+.inner-footer {
   @include container;
   margin: 0 auto;
 }
@@ -8,8 +8,7 @@
 }
 
 main {
-  position: relative;
-  top: $font-default * -2.1;
+  @include container;
 }
 
 .breadcrumb, .highlighted {
@@ -23,10 +22,6 @@ main {
 }
 
 .layout {
-  > header {
-    @include span(12);
-  }
-    
   .sidebar-first, .sidebar-second {
     @include span(12);
     @include susy-breakpoint($medium) {

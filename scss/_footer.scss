@@ -1,25 +1,98 @@
+/*
 .page {
   > footer {
-    background-color: $primary-color;
-    border-top: $font-default / 3 lighten($primary-color, 20%) solid;
+    background-color: #2c3849;
+    border-top: 5px solid #3494D2;
+    color: white;
+    font-size: 22px;
+    
     padding-top: $font-default;
     padding-bottom: $font-default;
-    color: $primary-contrast;
 
     a { color: $primary-contrast; }
 
     .footer-directions {
       margin-top: 0;
-      > a, > address {
-	margin: 0 $font-default 0 0;
-	display: inline-block;
+      > address {
+        font-style: normal;
+	    margin: 0 $font-default 0 0;
+	    display: inline-block;
       }
-          
-      
+      > a { display:none; }
     }
   }
 }
-#hcpss-gmaps-footer-icon {
-  width: 120px;
-  height: 120px;
+*/
+
+main + footer {
+  margin-top: 30px;
 }
+
+.layout > footer {
+  background-color: #2c3849;
+  border-top: 5px solid #3494D2;
+  color: white;
+  font-size: 22px;
+}
+
+footer .footer-wrap {
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-right: 40px;
+  margin-left: 40px;
+  max-width: 1280px;
+
+  @media screen and (min-width: 1100px) {
+    float: none;
+    width: 100%;
+    max-width: 1280px;
+  }
+}
+
+footer .footer-wrap address {
+  font-style: normal;
+}
+
+
+footer .footer-address address strong {
+  font-size: 28px;
+}
+
+footer a {
+  color: white;
+}
+
+footer .footer-social-icons {
+  font-size: 84px;
+  display: flex;
+  list-style: none;
+  margin-top: 30px;
+  margin-bottom: 0;
+  @media screen and (max-width: $x-large) {
+    padding-left: 0px;
+  }
+}
+
+.page footer .footer-social-icons li {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 0;
+}
+
+footer .contents {
+  @include container;
+  .col-left, .col-right {
+    @include span(6);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

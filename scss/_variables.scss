@@ -7,7 +7,8 @@ $susy: (
   gutter-position: inside,
 );
 
-$font-family-primary: 'Fira Sans', sans-serif;
+$font-family-primary: 'Source Sans Pro', sans-serif;
+$font-family-header: 'Open Sans', sans-serif;
 
 $font-large:   2.0rem;
 $font-default: 1.8rem;
@@ -22,11 +23,12 @@ $font-weight--ultra-bold: 600;
 
 // Colors
 $text-color:        #515151;
-$primary-color:     #0063a4;
+$primary-color:     #3d6eb8;
 $secondary-color:   #a2a2a2;
-$primary-contrast:  #ffffff;
+$primary-contrast:  #d5d3e1;
 $tertiary-color:    #fecc6a;
 $tertiary-contrast: #444444;
+$background-color:  #f4f4ef;
 
 // Breakpoints
 $x-small: 320px;

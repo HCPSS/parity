@@ -1,22 +1,31 @@
 {% extends "block.html.twig" %}
 
 {% block content %}
-  <div class="branding-block">   
+  <p>
     {% if site_logo %}
       <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="logo">
-        <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-      </a>
+        <img class="hcpss-logo" src="{{ site_logo }}" alt="{{ 'Home'|t }}">
+      </a> 
     {% endif %}
-  
-  
+    
+    HCPSS
+    
     {% if site_name %}
-      <div class="site-title {% if site_slogan %}with-slogan{% else %}without-slogan{% endif %}">
-        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-name">{{ site_name }}</a>
-
-        {% if site_slogan %}
-          <div class="slogan">{{ site_slogan }}</div>
-        {% endif %}
-      </div>
+      <span class="news-navigation--separator">/</span>
+      <span class="news-navigation--section">{{ site_name }}</span>
     {% endif %}
-  </div>
+    
+    {% if site_slogan %}
+      <span class="news-navigation--separator">/</span>
+      <div class="slogan">{{ site_slogan }}</div>
+    {% endif %}
+  </p>
+  
+  {% block secondary_nav %}
+    <nav>
+      <ul>
+        <li><a href="/search"><i class="fa fa-search" aria-hidden="true"></i> Search</a></li>
+      </ul>
+    </nav>
+  {% endblock %}
 {% endblock %}
