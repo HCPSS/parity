@@ -64,7 +64,7 @@
   }
 }
 
-.news-navigation > .region-header > .contextual-region > nav > ul {
+.news-navigation > .region-header > .block-system-branding-block > nav > ul {
   display: flex;
   list-style: none;
   @media screen and (max-width: $x-large) {
@@ -72,7 +72,7 @@
   }
 }
 
-.news-navigation > .region-header >.contextual-region > nav > ul > li {
+.news-navigation > .region-header > .block-system-branding-block > nav > ul > li {
   text-transform: uppercase;
   @media screen and (max-width: $x-large) {
     font-size: 18px;
