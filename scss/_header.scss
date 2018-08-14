@@ -93,6 +93,11 @@ a.logo { border-bottom: none; }
   }
 }
 
+a.header-link {
+  border-bottom: none;
+  color: inherit;
+}
+
 .slogan {
   font-weight: normal;
   font-size: $font-large;
