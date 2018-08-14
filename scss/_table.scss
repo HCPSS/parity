@@ -1,7 +1,7 @@
 table{
   tr {
     &:nth-child(even) {
-      background-color: lighten($secondary-color, 30%);
+      background-color: white;
     }
 
     th {
