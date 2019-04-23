@@ -11,7 +11,7 @@ To develop the theme, you need npm, bower, and grunt. There is a convenient
 docker container that can help:
 
 ```
-docker run --rm -v $(pwd):/data banderson/node-bower-gulp npm install
+docker run --rm -it -v $(pwd):/app --workdir=/app node npm install
 docker run --rm -v $(pwd):/data banderson/node-bower-gulp bower install
 docker run --rm -it --name watchme -v $(pwd):/data banderson/node-bower-gulp gulp watch
 ```
