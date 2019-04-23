@@ -34,19 +34,24 @@ footer a {
 }
 
 footer .footer-social-icons {
-  font-size: 84px;
+  font-size: 42px;
   display: flex;
   list-style: none;
   margin-top: 30px;
   margin-bottom: 0;
-  @media screen and (max-width: $x-large) {
+  @include susy-breakpoint($large) {
     padding-left: 0px;
+    font-size: 84px;
   }
 }
 
 .page footer .footer-social-icons li {
-  margin-left: 25px;
-  margin-right: 25px;
+  @include susy-breakpoint($large) {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 0;
   
   a { border-bottom: none; }
@@ -55,6 +60,9 @@ footer .footer-social-icons {
 footer .contents {
   @include container;
   .col-left, .col-right {
-    @include span(6);
+    @include span(12);
+    @include susy-breakpoint($x-large) {
+      @include span(6);
+    }
   }
 }
