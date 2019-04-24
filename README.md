@@ -12,6 +12,5 @@ docker container that can help:
 
 ```
 docker run --rm -v $(pwd):/data banderson/node-bower-gulp npm install
-docker run --rm -v $(pwd):/data banderson/node-bower-gulp bower install
 docker run --rm -it --name watchme -v $(pwd):/data banderson/node-bower-gulp gulp watch
 ```

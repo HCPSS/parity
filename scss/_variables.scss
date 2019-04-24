@@ -1,10 +1,9 @@
 $susy: (
-  container:       1280px,
-  columns:         12,
-  gutters:         1/4,
-  math:            fluid,
-  output:          float,
-  gutter-position: inside,
+  'columns': susy-repeat(12),
+  'gutters': 0.25,
+  'spread': 'narrow',
+  'container-spread': 'wide',
+  'svg-grid-colors': hsl(180, 50%, 80%),
 );
 
 $font-family-primary: 'Source Sans Pro', sans-serif;

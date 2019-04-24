@@ -1,5 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 .inner-footer {
-  @include container;
+  display: flex;
   margin: 0 auto;
 }
 
@@ -28,33 +32,26 @@ main {
 .layout {
   .sidebar-first, .sidebar-second {
     @include span(12);
-    @include susy-breakpoint($medium) {
-        @include span(3);
+    @media screen and (min-width: $medium) {
+      @include span(3);
     }
   }
 
   &.two-sidebars #content {
     @include span(12);
-    @include susy-breakpoint($medium) {
-        @include span(6);
+    @media screen and (min-width: $medium) {
+      @include span(6);
     }
   }
 
   &.one-sidebar #content {
     @include span(12);
-    @include susy-breakpoint($medium) {
-        @include span(9);
+    @media screen and (min-width: $medium) {
+      @include span(9);
     }
   }
 
   &.no-sidebars #content {
     @include span(12);
-  }
-
-  .footer-first, .footer-second {
-    @include span(12);
-    @include susy-breakpoint($x-large) {
-        @include span(6);
-    }
   }
 }

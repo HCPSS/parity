@@ -15,8 +15,10 @@
     "gulp-uglify": "^2.0.1",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
+    "normalize.css": "^8.0.1",
     "rimraf": "^2.6.3",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "susy": "^3.0.5"
   },
   "scripts": {
     "postinstall": "node_modules/.bin/rimraf node_modules/**/*.info && gulp sass && gulp compress"

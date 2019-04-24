@@ -11,20 +11,6 @@ main + footer {
   p { margin: 0; }
 }
 
-footer .footer-wrap {
-  margin-top: 20px;
-  margin-bottom: 0;
-  margin-right: 40px;
-  margin-left: 40px;
-  max-width: 1280px;
-
-  @media screen and (min-width: 1100px) {
-    float: none;
-    width: 100%;
-    max-width: 1280px;
-  }
-}
-
 footer .footer-wrap address {
   font-style: normal;
 }
@@ -39,29 +25,33 @@ footer .footer-social-icons {
   list-style: none;
   margin-top: 30px;
   margin-bottom: 0;
-  @include susy-breakpoint($large) {
-    padding-left: 0px;
+  padding-left: 0px;
+  @media only screen and (min-width: $x-large) {
     font-size: 84px;
   }
 }
 
 .page footer .footer-social-icons li {
-  @include susy-breakpoint($large) {
+  @media only screen and (min-width: $large) {
     margin-left: 25px;
     margin-right: 25px;
   }
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 0;
+
+  margin: 0 10px;
+
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
   
   a { border-bottom: none; }
 }
 
 footer .contents {
   @include container;
+  margin-top: 20px;
+
   .col-left, .col-right {
     @include span(12);
-    @include susy-breakpoint($x-large) {
+    @media only screen and (min-width: $large) {
       @include span(6);
     }
   }

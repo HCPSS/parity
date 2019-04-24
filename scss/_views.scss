@@ -64,7 +64,7 @@
       margin-top: 0;  
     }
     
-    @include susy-breakpoint($medium) {
+    @media only screen and (min-width: $medium) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: $font-default / 2;

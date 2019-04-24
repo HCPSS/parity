@@ -1,10 +1,8 @@
 .news-navigation {
   @include container;
-  margin-top: 0px;
   padding-bottom: 15px;
   padding-top: 15px;
-  min-height: 60px;
-  
+  min-height: 60px;  
   border-bottom: 1px #ccc solid;
   
   @media screen and (max-width: $x-large) {
@@ -39,6 +37,10 @@
       width: 40px;
       margin-top: -7px;
     }
+  }
+
+  & > .region-header {
+    @include span(12);
   }
 }
 
