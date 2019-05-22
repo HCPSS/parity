@@ -1,6 +1,17 @@
 <?php
 
 /**
+ * Implementation of hook_preprocess_block().
+ */
+function parity_preprocess_block(&$variables) {
+  if ($variables['plugin_id'] == 'system_branding_block') {
+    $route_provider = \Drupal::service('router.route_provider');
+    $routes = $route_provider->getRoutesByPattern('/search');    
+    $variables['site_search'] = count($routes) > 0;
+  }
+}
+
+/**
  * Implementation of hook_preprocess_page().
  */
 function parity_preprocess_page(&$variables) {

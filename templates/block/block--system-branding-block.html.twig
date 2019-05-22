@@ -23,10 +23,12 @@
   </p>
   
   {% block secondary_nav %}
-    <nav>
-      <ul>
-        <li><a href="/search"><i class="fa fa-search" aria-hidden="true"></i> Search</a></li>
-      </ul>
-    </nav>
+  	{% if site_search %}
+      <nav>
+        <ul>
+          <li><a href="/search"><i class="fa fa-search" aria-hidden="true"></i> Search</a></li>
+        </ul>
+      </nav>
+    {% endif %}
   {% endblock %}
 {% endblock %}
