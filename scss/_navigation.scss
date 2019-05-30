@@ -16,6 +16,10 @@
   
       a {
         border-bottom: none;   
+
+        &.is-active {
+          color: inherit;
+        }
       }
     }
   }
