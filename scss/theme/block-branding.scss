@@ -1,0 +1,22 @@
+.hcpss-logo {
+  width: 60px;
+}
+
+.brand-header {
+  margin-bottom: 0;
+  margin-top: 1em;
+  font-family: 'Open Sans',sans-serif;
+  border-bottom: 1px #ccc solid;
+
+  .title-seperator {
+    color: #9eb4dd;
+    font-weight: 600;
+  }
+  a {
+    color: inherit;
+  }
+
+  .org-title {
+    font-weight: bold;
+  }
+}

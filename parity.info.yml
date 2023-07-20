@@ -1,12 +1,26 @@
 name: Parity
 type: theme
-description: An HCPSS theme aimed at simplicity.
-core: 8.x
-core_version_requirement: ^8 || ^9
+'base theme': stable9
+starterkit: true
+version: VERSION
 libraries:
-  - parity/global-styling
+  - parity/base
+  - parity/messages
   - core/normalize
-base theme: stable
+libraries-extend:
+  user/drupal.user:
+    - parity/user
+  core/drupal.dropbutton:
+    - parity/dropbutton
+  core/drupal.dialog:
+    - parity/dialog
+  file/drupal.file:
+    - parity/file
+  core/drupal.progress:
+    - parity/progress
+core_version_requirement: ^10
+generator: 'starterkit_theme:10.1.1'
+description: 'HCPSS base theme'
 regions:
   header: Header
   primary_menu: Primary Menu
@@ -19,3 +33,4 @@ regions:
   footer_second: Footer (second)
   page_top: Page top
   page_bottom: Page bottom
+
