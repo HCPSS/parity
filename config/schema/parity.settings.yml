@@ -1,0 +1,11 @@
+parity.settings:
+  type: theme_settings
+  label: 'Parity settings'
+  mapping:
+    general:
+      type: mapping
+      label: 'Parity general settings'
+      mapping:
+        branding_menu:
+          type: string
+          label: 'Parity branding menu'

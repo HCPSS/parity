@@ -2,7 +2,7 @@
 
 {% block content %}
   <header class="container is-widescreen brand-header">
-    <div class="columns">
+    <div class="columns is-vcentered">
       {% if site_logo %}
         <div class="column is-narrow">
           <a href="http://www.hcpss.org" title="{{ 'HCPSS Home'|t }}" class="logo">
@@ -24,16 +24,12 @@
           <br><span class="slogan">{{ site_slogan }}</span>
         {% endif %}
       </div>
+
+      {% block secondary_nav %}
+        {% if branding_menu %}
+          {{ branding_menu }}
+        {% endif %}
+      {% endblock %}
     </div>
   </header>
-
-  {% block secondary_nav %}
-    {% if site_search %}
-      <nav>
-        <ul>
-          <li><a href="/search"><i class="fa fa-search" aria-hidden="true"></i> Search</a></li>
-        </ul>
-      </nav>
-    {% endif %}
-  {% endblock %}
 {% endblock %}

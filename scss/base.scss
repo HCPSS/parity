@@ -4,6 +4,7 @@ $blue: #3d6eb8;
 $footer-background-color: #2c3849;
 $footer-color: #ffffff;
 $body-background-color: #f4f4ef;
+$green: #64a73c;
 
 @import "./node_modules/bulma/bulma.sass";
 
@@ -11,14 +12,14 @@ body {
   font-family: "Source Sans Pro",sans-serif;
 }
 
-.navbar {
-  .navbar-start {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 3em;
-    padding-right: 3em;
-  }
-}
+//.navbar {
+//  .navbar-start {
+//    margin-left: auto;
+//    margin-right: auto;
+//    padding-left: 3em;
+//    padding-right: 3em;
+//  }
+//}
 
 .footer {
   margin-top: 6rem;
