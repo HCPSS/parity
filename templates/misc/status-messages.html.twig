@@ -15,19 +15,17 @@
  * Available variables:
  * - message_list: List of messages to be displayed, grouped by type.
  * - status_headings: List of all status types.
- * - display: (optional) May have a value of 'status' or 'error' when only
- *   displaying messages of that specific type.
  * - attributes: HTML attributes for the element, including:
  *   - class: HTML classes.
  */
 #}
-
+<div class="my-3" data-drupal-messages>
 {% block messages %}
-{% for type, messages in message_list %}
+{% for type, messages in message_l3ist %}
   {%
     set classes = [
-      'messages',
-      'messages-' ~ type,
+      'alert',
+      'alert-' ~ type,
     ]
   %}
   <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
@@ -38,9 +36,9 @@
         <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
       {% endif %}
       {% if messages|length > 1 %}
-        <ul class="messages-list">
+        <ul class="messages__list">
           {% for message in messages %}
-            <li class="messages-item">{{ message }}</li>
+            <li class="messages__item">{{ message }}</li>
           {% endfor %}
         </ul>
       {% else %}
@@ -54,3 +52,4 @@
   {% set attributes = attributes.removeClass(classes) %}
 {% endfor %}
 {% endblock messages %}
+</div>

@@ -1,25 +1,9 @@
 {
-  "name": "parity",
-  "version": "8.0.0",
-  "description": "An HCPSS Drupal theme.",
-  "main": "index.js",
-  "author": "Brendan Anderson <brendan_anderson@hcpss.org>",
-  "license": "MIT",
-  "devDependencies": {
-    "browser-sync": "^2.26.4",
-    "gulp": "^3.9.1",
-    "gulp-notify": "^3.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-shell": "^0.5.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^2.0.1",
-    "gulp-util": "^3.0.8",
-    "gulp-watch": "^4.3.11",
-    "rimraf": "^2.6.3",
-    "run-sequence": "^1.2.2",
-    "susy": "^2.2.14"
-  },
-  "scripts": {
-    "postinstall": "node_modules/.bin/rimraf node_modules/**/*.info && gulp sass && gulp compress"
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "autoprefixer": "^10.4.17",
+    "bootstrap": "^5.3.2",
+    "postcss": "^8.4.33",
+    "postcss-cli": "^11.0.0"
   }
 }

@@ -2,14 +2,9 @@ font:
   css:
     theme:
       '//fonts.googleapis.com/css?family=Source+Sans+Pro': {type: external, minified: true}
-      '//fonts.googleapis.com/css?family=Open+Sans': {type: external, minified: true}
-global-styling:
+      '//fonts.googleapis.com/css?family=Open+Sans:600,800|Source+Sans+Pro': {type: external, minified: false}
+base:
   version: VERSION
   css:
-    base:
-      css/parity.css: {}
-      '//use.fontawesome.com/releases/v5.2.0/css/all.css': {type: external, minified: true}
-# global-scripts:
-#   version: VERSION
-#   js:
-#     js/scripts.js: {}
+    theme:
+      css/custom.css: {}

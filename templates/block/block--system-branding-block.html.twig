@@ -1,34 +1,54 @@
 {% extends "block.html.twig" %}
-
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
 {% block content %}
-  <p>
+  <div class="row align-items-center border-bottom py-3 font-open">
     {% if site_logo %}
-      <a href="http://www.hcpss.org" title="{{ 'HCPSS Home'|t }}" class="logo">
-        <img class="hcpss-logo" src="{{ site_logo }}" alt="{{ 'Home'|t }}">
-      </a> 
+      <div class="col-auto">
+        <a href="https://www.hcpss.org" title="{{ 'HCPSS Home'|t }}" class="site-logo">
+          <img class="hcpss-logo" src="{{ site_logo }}" alt="{{ 'Home'|t }}">
+        </a>
+      </div>
     {% endif %}
-    
-    <a href="http://www.hcpss.org" title="{{ 'HCPSS Home'|t }}" class="header-link">HCPSS</a>
-    
-    {% if site_name %}
-      <span class="news-navigation--separator">/</span>
-      <span class="news-navigation--section">
-        <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="header-link">{{ site_name }}</a>
-      </span>
-    {% endif %}
-    
-    {% if site_slogan %}
-      <br><span class="slogan">{{ site_slogan }}</span>
-    {% endif %}
-  </p>
-  
-  {% block secondary_nav %}
-  	{% if site_search %}
-      <nav>
-        <ul>
-          <li><a href="/search"><i class="fa fa-search" aria-hidden="true"></i> Search</a></li>
-        </ul>
-      </nav>
-    {% endif %}
-  {% endblock %}
+
+    <div class="col">
+      <a
+        href="https://www.hcpss.org"
+        title="{{ 'HCPSS Home'|t }}"
+        class="fs-1 text-reset text-decoration-none fw-bold">HCPSS</a>
+      {% if site_name %}
+        <span class="news-navigation--separator fs-1 text-light-blue mx-1">/</span>
+        <span class="news-navigation--section fs-1">
+          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="fs-1 text-reset text-decoration-none">{{ site_name }}</a>
+        </span>
+      {% endif %}
+
+
+      {% if site_slogan %}
+        <div class="site-slogan">{{ site_slogan }}</div>
+      {% endif %}
+    </div>
+
+    {% block secondary_nav %}
+      {% if site_search %}
+        <div class="col text-end">
+          <ul class="nav justify-content-end text-green fs-3 text-uppercase">
+            <li class="nav-item"><a href="/search" class="nav-link text-reset"><i class="fa-solid fa-magnifying-glass"></i></i> Search</a></li>
+          </ul>
+        </div>
+      {% endif %}
+    {% endblock %}
+  </div>
 {% endblock %}
