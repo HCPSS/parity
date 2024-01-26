@@ -8,41 +8,21 @@
 
   &.alert-info {
     border-left-color: $info;
-
-    .auto-icon {
-      @extend .fa-circle-info;
-    }
   }
 
   &.alert-warning {
     border-left-color: $warning;
-
-    .auto-icon {
-      @extend .fa-triangle-exclamation;
-    }
   }
 
   &.alert-danger {
     border-left-color: $danger;
-
-    .auto-icon {
-      @extend .fa-circle-exclamation;
-    }
   }
 
   &.alert-status {
     border-left-color: $green;
-
-    .auto-icon {
-      @extend .fa-circle-check;
-    }
   }
 
   ul {
     margin: 0;
   }
-}
-
-.auto-icon {
-  @extend .fa-solid;
 }

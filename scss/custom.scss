@@ -62,14 +62,7 @@ $table-striped-bg: #ffffff;
 $light-blue: lighten($blue, 30%);
 $dark-blue: darken(desaturate($blue, 25%), 25%);
 
-
 @import "../node_modules/bootstrap/scss/bootstrap";
-$fa-font-path: "../webfonts";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
-@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
-
 @import "alerts";
 @import "footer";
 @import "form";

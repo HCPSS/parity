@@ -1,9 +1,14 @@
 {
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "autoprefixer": "^10.4.17",
     "bootstrap": "^5.3.2",
     "postcss": "^8.4.33",
     "postcss-cli": "^11.0.0"
+  },
+  "scripts": {
+    "watch": "sass --watch ./scss/custom.scss ./css/custom.css",
+    "build": "sass --style=compressed ./scss/custom.scss ./css/custom.css",
+    "postbuild": "purgecss --config ./purgecss.config.js --output ./css"
   }
 }
