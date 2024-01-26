@@ -1,0 +1,21 @@
+form .description {
+  @extend .form-text;
+}
+
+label.form-required:after {
+  content: "*";
+  color: $red;
+}
+
+fieldset {
+  @extend .p-4;
+  @extend .border;
+}
+
+.form-text {
+  margin: 0;
+}
+
+.form-control, .form-control:focus, .form-select {
+  background-color: white;
+}

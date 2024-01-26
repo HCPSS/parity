@@ -1,70 +1,78 @@
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-//@import "../node_modules/bootstrap/scss/functions";
-//
-//// 2. Include any default variable overrides here
-//
-//// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
-//@import "../node_modules/bootstrap/scss/variables";
-//@import "../node_modules/bootstrap/scss/variables-dark";
-//
-//// 4. Include any default map overrides here
-//
-//// 5. Include remainder of required parts
-//@import "../node_modules/bootstrap/scss/maps";
-//@import "../node_modules/bootstrap/scss/mixins";
-//@import "../node_modules/bootstrap/scss/root";
-//
-//// 6. Optionally include any other parts as needed
-//@import "../node_modules/bootstrap/scss/utilities";
-//@import "../node_modules/bootstrap/scss/reboot";
-//@import "../node_modules/bootstrap/scss/type";
-//@import "../node_modules/bootstrap/scss/images";
-//@import "../node_modules/bootstrap/scss/containers";
-//@import "../node_modules/bootstrap/scss/grid";
-//@import "../node_modules/bootstrap/scss/helpers";
-//
-//// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-//@import "../node_modules/bootstrap/scss/utilities/api";
+$white:    #fff !default;
+$gray-100: #f8f8f5 !default;
+$gray-200: #f4f4ef !default;
+$gray-300: #d6d7d2 !default;
+$gray-400: #a8a8a5 !default;
+$gray-500: #878684 !default;
+$gray-600: #757673 !default;
+$gray-700: #444443 !default;
+$gray-800: #2f2f2d !default;
+$gray-900: #141413 !default;
+$black:    #000 !default;
+
+$blue:    #3d6eb8 !default;
+$indigo:  #6610f2 !default;
+$purple:  #613d7c !default;
+$pink:    #e83e8c !default;
+$red:     #ff0039 !default;
+$orange:  #f0ad4e !default;
+$yellow:  #e09600 !default;
+$green:   #64a73c !default;
+$teal:    #20c997 !default;
+$cyan:    #3494D2 !default;
+
+$primary:       $blue !default;
+$secondary:     $gray-800 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$min-contrast-ratio:   4.5 !default;
+
+// Options
+$enable-rounded: false !default;
+
+// Body
+$body-color:    $gray-800 !default;
+$body-bg: $gray-200 !default;
+
+// Fonts
+$font-family-sans-serif:    "Source Sans Pro",sans-serif !default;
+$headings-font-weight:      400 !default;
+$headings-font-family: "Open Sans",sans-serif;
+
+// Navbar
+$navbar-dark-hover-color:       rgba($white, 1) !default;
+$navbar-light-hover-color:      rgba($black, .9) !default;
+
+// Alerts
+$alert-border-width:            1 !default;
+
+// Progress bars
+$progress-height:               .5rem !default;
 
 // 18px base font size.
 $font-size-base: 1.125rem;
 $border-color: #cccccc;
 $blue: #3d6eb8;
 $table-striped-bg: #ffffff;
-//$h1-font-size:                $font-size-base * 2.85;
-
+$light-blue: lighten($blue, 30%);
+$dark-blue: darken(desaturate($blue, 25%), 25%);
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
-$fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
+$fa-font-path: "../webfonts";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
 
-// 8. Add additional custom code here
-
-$light-blue: #9eb4dd;
-$text-green: #64a73c;
-$dark-blue: #2c3849;
-
-:root,
-[data-bs-theme=light] {
-  --bs-body-color: #515151;
-  --bs-body-bg: #f4f4ef;
-}
-
-body {
-  font-family: "Source Sans Pro",sans-serif;
-}
-
-h2, h3, h4, h5, h6 {
-  font-family: "Source Sans Pro",sans-serif;
-}
-
-h1 {
-  font-family: "Open Sans", sans-serif;
-}
+@import "alerts";
+@import "footer";
+@import "form";
 
 .font-open {
   font-family: "Open Sans", sans-serif;
@@ -79,21 +87,9 @@ h1 {
 }
 
 .text-green {
-  color: $text-green;
+  color: $green;
 }
 
-.alert-status {
-  @extend .alert-success;
-}
-
-input.form-control {
-  background-color: white;
-}
-
-.site-footer {
-  border-top: 5px $blue solid;
-  background-color: $dark-blue;
-  color: white;
-  margin-top: 5rem;
-  padding: 1rem 0;
+.hcpss-logo {
+  width: 50px;
 }
