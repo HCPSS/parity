@@ -54,6 +54,8 @@ $alert-border-width:            1 !default;
 // Progress bars
 $progress-height:               .5rem !default;
 
+$breadcrumb-divider: quote("»");
+
 // 18px base font size.
 $font-size-base: 1.125rem;
 $border-color: #cccccc;
@@ -85,4 +87,33 @@ $dark-blue: darken(desaturate($blue, 25%), 25%);
 
 .hcpss-logo {
   width: 50px;
+}
+
+em.placeholder {
+  display: unset;
+  min-height: unset;
+  vertical-align: unset;
+  cursor: unset;
+  background-color: unset;
+  opacity: unset;
+}
+
+table {
+  @extend .table;
+  @extend .table-striped;
+  @extend .caption-top;
+
+  thead {
+    @extend .table-dark;
+    tr {
+      --bs-table-bg: var(--bs-gray-700);
+      a {
+        color: unset;
+      }
+    }
+  }
+}
+
+.field-label {
+  @extend .fw-bold;
 }

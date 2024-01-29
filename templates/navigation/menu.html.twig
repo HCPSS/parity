@@ -38,7 +38,8 @@
       {%
         set classes = [
           'menu-item',
-          'my-2',
+          not loop.last ? 'border-bottom',
+          menu_level == 0 ? 'py-3' : 'my-2',
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>

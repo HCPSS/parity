@@ -3,12 +3,19 @@
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "autoprefixer": "^10.4.17",
     "bootstrap": "^5.3.2",
+    "css-loader": "^6.9.1",
+    "html-webpack-plugin": "^5.6.0",
     "postcss": "^8.4.33",
-    "postcss-cli": "^11.0.0"
+    "postcss-cli": "^11.0.0",
+    "postcss-loader": "^8.0.0",
+    "sass": "^1.70.0",
+    "uglify-js": "^3.17.4"
   },
   "scripts": {
     "watch": "sass --watch ./scss/custom.scss ./css/custom.css",
     "build": "sass --style=compressed ./scss/custom.scss ./css/custom.css",
-    "postbuild": "purgecss --config ./purgecss.config.js --output ./css"
+    "postbuild": "purgecss --config ./purgecss.config.js --output ./css",
+    "prebuild": "uglifyjs ./node_modules/bootstrap/dist/js/bootstrap.js -o ./js/bootstrap.min.js",
+    "prewatch": "uglifyjs ./node_modules/bootstrap/dist/js/bootstrap.js -o ./js/bootstrap.min.js"
   }
 }

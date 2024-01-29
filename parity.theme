@@ -30,3 +30,16 @@ function parity_preprocess_image_widget(array &$variables) {
     unset($data['preview']);
   }
 }
+
+function parity_preprocess_views_view_grid(array &$variables) {
+//dpm($variables['items'][0]);
+  foreach ($variables['items'] as $col_num => $column) {
+    $variables['items'][$col_num]['attributes']->removeAttribute('style');
+//    $a = new Drupal\Core\Template\Attribute();
+//$a->removeAttribute('style');
+//  dpm($column['attributes']);
+//    foreach ($column['content'] as $row) {
+//
+//    }
+  }
+}
