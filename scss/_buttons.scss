@@ -1,0 +1,7 @@
+.btn-card {
+  --bs-btn-bg: var(--bs-white);
+  --bs-btn-border-color: var(--bs-gray-300);
+  --bs-btn-hover-border-color: var(--bs-gray-500);
+  --bs-btn-hover-bg: var(--bs-white);
+  @extend .btn-light;
+}

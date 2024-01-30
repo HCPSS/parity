@@ -34,7 +34,8 @@
 {% if options.row_class_default %}
   {%
     set row_classes = [
-      'views-row',
+      'row',
+      'pb-md-4',
       options.alignment == 'horizontal' ? 'clearfix',
     ]
   %}
@@ -42,7 +43,7 @@
 {% if options.col_class_default %}
   {%
     set col_classes = [
-      'col-sm',
+      'col-md',
       options.alignment == 'vertical' ? 'clearfix',
     ]
   %}

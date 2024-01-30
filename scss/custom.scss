@@ -68,6 +68,7 @@ $dark-blue: darken(desaturate($blue, 25%), 25%);
 @import "alerts";
 @import "footer";
 @import "form";
+@import "buttons";
 
 .font-open {
   font-family: "Open Sans", sans-serif;
@@ -116,4 +117,15 @@ table {
 
 .field-label {
   @extend .fw-bold;
+}
+
+.hc-faq-question {
+  @extend .fs-3;
+  @extend .p-4;
+  @extend .border-bottom;
+  @extend .d-block;
+
+  &::after {
+    content: "\00a0→";
+  }
 }
