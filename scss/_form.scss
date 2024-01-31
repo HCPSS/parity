@@ -19,3 +19,8 @@ fieldset {
 .form-control, .form-control:focus, .form-select {
   background-color: white;
 }
+
+.paragraphs-subform {
+  @extend .vstack;
+  @extend .gap-3;
+}
