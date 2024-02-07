@@ -54,9 +54,9 @@
 <div{{ attributes.addClass(classes) }}>
   {% if options.alignment == 'horizontal' %}
     {% for row in items %}
-      <div{{ row.attributes.addClass(row_classes) }}>
+      <div{{ row.attributes.addClass('row', 'mb-4') }}>
         {% for column in row.content %}
-          <div{{ column.attributes.addClass(col_classes) }}>
+          <div{{ column.attributes.addClass('col-' ~ (12/options.columns)) }}>
             {{- column.content -}}
           </div>
         {% endfor %}
