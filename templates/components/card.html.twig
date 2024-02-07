@@ -1,0 +1,10 @@
+<article class="card w-100 h-100 {% if primary %}text-bg-light{% else %}text-bg-white{% endif %}">
+    {% block card_header %}
+    <div class="card-header">
+        <h5>{{ name }}</h5>
+    </div>
+    {% endblock %}
+    <div class="card-body">
+        {% block card_body %}{% endblock %}
+    </div>
+</article>
