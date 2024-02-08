@@ -15,7 +15,7 @@
     "watch": "sass --watch ./scss/custom.scss ./css/custom.css",
     "build": "sass --style=compressed ./scss/custom.scss ./css/custom.css",
     "postbuild": "purgecss --config ./purgecss.config.js --output ./css",
-    "prebuild": "uglifyjs ./node_modules/bootstrap/dist/js/bootstrap.js -o ./js/bootstrap.min.js",
-    "prewatch": "uglifyjs ./node_modules/bootstrap/dist/js/bootstrap.js -o ./js/bootstrap.min.js"
+    "prebuild": "uglifyjs ./node_modules/bootstrap/dist/js/bootstrap.bundle.js -o ./js/bootstrap.min.js",
+    "prewatch": "uglifyjs ./node_modules/bootstrap/dist/js/bootstrap.bundle.js -o ./js/bootstrap.min.js"
   }
 }

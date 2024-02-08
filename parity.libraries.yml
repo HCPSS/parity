@@ -17,3 +17,7 @@ base:
       css/custom.css: {}
   dependencies:
     - parity/fontawesome
+dropdown:
+  version: VERSION
+  js:
+    'js/dropdown.js': {}
