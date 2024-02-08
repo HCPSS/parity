@@ -10,6 +10,7 @@ $gray-800: #2f2f2d !default;
 $gray-900: #141413 !default;
 $black:    #000 !default;
 
+
 $blue:    #3d6eb8 !default;
 $indigo:  #6610f2 !default;
 $purple:  #613d7c !default;
@@ -128,4 +129,9 @@ table {
   &::after {
     content: "\00a0→";
   }
+}
+
+.view-content {
+  @extend .vstack;
+  @extend .gap-3;
 }
