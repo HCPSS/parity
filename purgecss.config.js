@@ -5,5 +5,17 @@ module.exports = {
     './**/*.php',
   ],
   css: ['./css/custom.css'],
-  safelist: ['html', 'body', /^alert-/, /^hc-/, /^col-/]
+  safelist: [
+    'html',
+    'body',
+    /^alert-/,
+    /^hc-/,
+    /^col-/,
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+  ]
 }
