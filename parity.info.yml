@@ -6,5 +6,5 @@ version: VERSION
 libraries:
   - parity/font
   - parity/base
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 generator: 'starterkit_theme:10.2.1'
