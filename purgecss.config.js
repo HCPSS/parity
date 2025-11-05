@@ -17,5 +17,6 @@ module.exports = {
     'h4',
     'h5',
     'h6',
+    /popover/,
   ]
 }
