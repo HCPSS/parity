@@ -1,15 +1,15 @@
 {
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^8.0.0",
-    "autoprefixer": "^10.4.17",
-    "bootstrap": "^5.3.2",
-    "css-loader": "^6.9.1",
-    "html-webpack-plugin": "^5.6.0",
-    "postcss": "^8.4.33",
-    "postcss-cli": "^11.0.0",
-    "postcss-loader": "^8.0.0",
-    "sass": "^1.70.0",
-    "uglify-js": "^3.17.4"
+    "autoprefixer": "^10.4.27",
+    "bootstrap": "^5.3.8",
+    "css-loader": "^6.11.0",
+    "html-webpack-plugin": "^5.6.6",
+    "postcss": "^8.5.8",
+    "postcss-cli": "^11.0.1",
+    "postcss-loader": "^8.2.1",
+    "sass": "^1.98.0",
+    "uglify-js": "^3.19.3"
   },
   "scripts": {
     "watch": "sass --watch ./scss/custom.scss ./css/custom.css",
