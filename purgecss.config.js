@@ -10,6 +10,7 @@ module.exports = {
     'body',
     /^alert-/,
     /^hc-/,
+    /^form-/,
     /^col-/,
     'h1',
     'h2',
